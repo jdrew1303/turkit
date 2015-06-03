@@ -9,13 +9,7 @@ import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TimeZone;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,7 +28,7 @@ public class S3 {
 	 * A date formatter for dates in our HTTP requests.
 	 */
 	public static final SimpleDateFormat dateFormat = new SimpleDateFormat(
-			"EEE, d MMM yyyy HH:mm:ss Z");
+			"EEE, d MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
 
 	static {
 		dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
