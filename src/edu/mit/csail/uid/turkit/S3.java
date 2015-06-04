@@ -116,6 +116,8 @@ public class S3 {
 			}
 			params.get("Content-Length").add("" + data.length);
 			params.get("Content-MD5").add("" + U.md5_base64(data));
+		} else {
+			params.get("Content-Length").add("0");
 		}
 
 		for (int i = 0; i < paramsList.length; i += 2) {
