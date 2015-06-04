@@ -29,9 +29,9 @@ S3.prototype.getURL = function(bucket, key) {
 	returns <code>{bucket:"hello", key:"hi.txt"}</code>.
  */
 S3.prototype.getBucketAndKey = function(url) {
-    var a = url.match(/http:\/\/s3\.amazonaws\.com\/([^\/]+)\/(.*)/)
+    var a = url.match(/https:\/\/s3\.amazonaws\.com\/([^\/]+)\/(.*)/)
     if (!a) {
-        a = url.match(/http:\/\/([^\/]+)\.s3\.amazonaws\.com\/(.*)/)
+        a = url.match(/https:\/\/([^\/]+)\.s3\.amazonaws\.com\/(.*)/)
         if (!a) return
     }
     return {bucket : a[1], key : a[2]}
