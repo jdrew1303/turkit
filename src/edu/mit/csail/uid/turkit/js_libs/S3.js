@@ -21,7 +21,7 @@ S3.prototype.defaultBucketName = null
 	Creates an S3 URL given a <code>bucket</code> and a <code>key</code>.
  */
 S3.prototype.getURL = function(bucket, key) {
-	return "http://s3.amazonaws.com/" + bucket + "/" + key
+	return "https://s3.amazonaws.com/" + bucket + "/" + key
 }
 
 /**

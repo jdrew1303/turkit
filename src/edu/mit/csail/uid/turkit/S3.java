@@ -124,7 +124,7 @@ public class S3 {
 			params.get(paramsList[i]).add(paramsList[i + 1]);
 		}
 
-		URL url = new URL("http://s3.amazonaws.com"
+		URL url = new URL("https://s3.amazonaws.com"
 				+ ((bucket != null) && (bucket.length() > 0) ? "/" + bucket
 						: "")
 				+ ((file != null) && (file.length() > 0) ? "/" + file : ""));
